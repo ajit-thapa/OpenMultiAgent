@@ -1,0 +1,5 @@
+{
+  "name": "OpenMultiAgent Orchestrator",
+  "description": "A visual playground for orchestrating parallel AI agent workflows with dependencies, shared memory, and task queues.",
+  "requestFramePermissions": []
+}
