@@ -18,9 +18,11 @@ export interface TaskResult {
   agentId: string;
   agentName: string;
   output: string;
-  status: 'pending' | 'running' | 'completed' | 'failed';
+  status: 'pending' | 'running' | 'completed' | 'failed' | 'waiting';
   startTime?: number;
   endTime?: number;
+  waitingFor?: string;
+  groundingMetadata?: any;
 }
 
 export interface SharedMemory {
@@ -33,4 +35,6 @@ export interface WorkflowState {
   sharedMemory: SharedMemory;
   isRunning: boolean;
   logs: string[];
+  waitingAgentId?: string | null;
+  initialInput: string;
 }
